@@ -2,6 +2,7 @@
 
 #include <stdint.h>
 #include <linux/fb.h>
+#include "cap_sdk_defs.h"
 
 /**
  * @brief Structure to hold Framebuffer device information.
@@ -23,3 +24,10 @@ void osal_fb_init(void);
  * @return Monotonic system time in milliseconds.
  */
 uint32_t osal_tick_get(void);
+
+int wifi_set_power(wifi_state_t state);
+
+/*
+    WIFI_MACADDRESS = {14+1}
+*/ 
+void wifi_get_info(wifi_info_t info, char * output);

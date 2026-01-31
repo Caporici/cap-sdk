@@ -68,4 +68,5 @@ void ui_init(void){
     lv_indev(disp);
 
     // TODO: MISC/STDLIB/THEMES
+    // TODO: LV_CONF(build yocto)
 }

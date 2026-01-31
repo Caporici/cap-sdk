@@ -11,13 +11,14 @@ ROOT_DIR := /home/victor/Github/cap-os-sdk
 # Ajuste aqui conforme sua estrutura real:
 SRC_DIR  := src
 OBJ_DIR  := obj
-BIN_DIR  := /home/victor/Github/cap-osal/build
+BIN_DIR  := /home/victor/Github/cap-sdk/build
 
 # Incluímos os diretórios de header
 INC_DIRS := \
     $(ROOT_DIR)/include \
     $(SRC_DIR)/include \
     include \
+	font \
     osal \
     ui
 
@@ -53,6 +54,7 @@ LDLIBS  := -llvgl -ldrm -lm -lpthread -lrt
 SRCS := $(wildcard $(SRC_DIR)/*.c) \
         $(wildcard $(SRC_DIR)/osal/*.c) \
         $(wildcard $(SRC_DIR)/ui/*.c) \
+		$(wildcard $(SRC_DIR)/font/*.c) \
         $(wildcard *.c) # Inclui o main.c se estiver na raiz
 
 # Isso transforma src/osal/osal.c em obj/src/osal/osal.o
